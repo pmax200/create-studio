@@ -1,0 +1,835 @@
+/********************
+--TABLE OF CONTENTS--
+1. PAGE STYLES
+2. DEFAULT TYPOGRAPHY
+3. NAVBAR
+4. HEADER SECTION
+5. SERVICES SECTION
+6. CTA BUTTON
+7. FLATICONS
+8. INSERT ONE
+9. PORTFOLIO
+10. PROGRESS BAR
+11. INSERT TWO
+12. INSERT THREE
+13. BLOG
+14. TESTIMONIAL
+15. CONTACT
+16. FOOTER
+17. COPYRIGHT
+********************/
+
+
+/** 1. PAGE STYLES **/
+
+body {
+	margin: 0px; /** eliminates blank space where body background color was visible above container **/
+	overflow-x: hidden;
+}
+
+.container {
+	background-color: lightgrey;
+	margin: 0 auto;
+}
+
+
+/** 2. DEFAULT TYPOGRAPHY **/
+
+/**
+headlines: h1-h4
+kaushan: h5-h6
+blurbs etc: p
+**/
+
+h1, h2, h3, h4, h5, h6, p, .btn, a, ul {
+	color: #303233;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Raleway', sans-serif;
+}
+
+h5, h6 {
+	font-family: 'Kaushan Script', cursive;
+}
+
+p, ul {
+	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 16px;
+}
+ 
+
+/** 3. NAVBAR **/
+
+/** fixed navbar   src: https://stackoverflow.com/a/37797978/4575423
+apply this to nav div
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+**/
+
+.nav {
+	background-color: #f5f5f5;
+	display: flex;
+	height: 70px;
+}
+
+.nav-left {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+.nav-left img {
+	padding-left: 25px;
+}
+
+.nav-right {
+	flex: 1;
+	font-family: 'Raleway', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.nav-right a {
+	border-bottom: 1px solid transparent; /* added to offset movement caused by active link border */
+}
+
+.active-container a, span {
+	border: none; /* added to stop doubling up of borders (ie the transparent one plus the active one) */
+	display: block;
+}
+
+.active-container span {
+	position: relative;
+	top: 5px;
+	margin: 0 auto;
+	width: 28px;
+	border-bottom: 1px solid #fcca03;
+}
+
+
+
+/** 4. HEADER SECTION **/
+.header-wrap {
+	background-color: #f5f5f5;
+}
+
+.header {
+	max-width: 990px;
+	display: flex;
+	margin: auto;
+	height: 610px;
+	align-items: center;
+}
+
+.header-col-1 {
+	width: 100px;
+	flex: 1;
+	text-align: center;
+	display: flex;
+}
+
+.header-col-1 h5 {
+	margin: 0;
+}
+
+.header-col-1 h1 {
+	margin-top: -5px;
+	margin-bottom: 20px;
+}
+
+.header-col-1-content {
+	margin: auto;
+}
+
+.header-col-2 {
+	width: 100px;
+	flex: 1;
+	text-align: center;
+	display: flex; /** this line creates nested flexbox so text can be centred vertically **/
+}
+
+.header-col-2-img {
+	margin: auto; /** this line only works because we are now in a nested flexbox **/
+}
+
+.header-col-2-img img {
+	width: 80%;
+	margin-top: 2%; /* micro-adjustment of img position */
+	margin-left: 15%; /* micro-adjustment of img position */
+}
+
+.header p {
+	line-height: 27px;
+}
+
+
+/** 5. SERVICES SECTION **/
+.services {
+	background: white;
+	padding: 150px 30px;
+}
+
+.services h6 {
+	margin: 0;
+}
+
+.services h2 {
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+.services-row {
+	text-align: center;
+	width: 700px;
+	margin: auto;
+	padding-bottom: 60px;
+}
+
+.dash {
+	margin: 0px auto;
+	width: 40px;
+	border-bottom: 1px solid #303233;
+}
+
+.services-items {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	justify-content: space-around;
+}
+
+.item-container {
+	display: flex;
+	margin: 20px;
+}
+
+.item-container h4 {
+	margin: 0;
+}
+
+.item-left-col {
+	margin-right: 20px;
+}
+
+.item-right-col p {
+	line-height: 26px;
+	width: 320px;
+	height: 120px;
+}
+
+.item-1-content {
+	background-image: url("../img/two-rounded-equal-squares-outlines-symbol.svg");
+}
+
+.item-2-content {
+	background-image: url("../img/equalization.svg");
+}
+
+.item-3-content {
+	background-image: url("../img/portfolio-outline.svg");
+}
+
+.item-4-content {
+	background-image: url("../img/contract-two-arrows-symbol-pointing-the-center-of-square-button.svg");
+}
+
+.item-5-content {
+	background-image: url("../img/gear-outlined-symbol.svg");
+}
+
+.item-6-content {
+	background-image: url("../img/paper-airplane-outline.svg");
+}
+
+.item-bg {
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 14px;
+	margin-left: -14px;
+}
+
+
+
+/** 6. CTA BUTTON **/
+.btn {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: white;
+	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15); 
+	text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15); 
+	padding: 15px;
+	margin: 40px auto 0px auto;
+	width: 100px;
+	transition: background-color 0.4s ease;
+	-webkit-transition: background-color 0.4s ease;
+	-moz-transition: background-color 0.4s ease;
+	-o-transition: background-color 0.4s ease;
+}
+
+.btn:hover {
+	background-color: #fcca03;
+}
+
+a {
+	text-decoration: none;
+	display: block; /* without this it won't register top and bottom margin in .btn style */
+}
+
+
+/** 7. FLATICONS **/
+.glyph {
+	display: inline-block;
+}
+
+.glyph .glyph-icon:before {
+    font-size: 42px;
+    color: #fcca03;
+    margin-left: 0;
+}
+
+
+/** 8. INSERT ONE **/
+
+.insert-one {
+	background-image: url("../img/drone-bg.jpg");
+	background-color: #f5f5f5;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 480px;
+	display: flex;
+	align-items: center;
+}
+
+.insert-one-content {
+	margin-left: 15%;
+	width: 35%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.insert-one .btn {
+	text-align: center;
+	margin-left: 0;
+}
+
+.insert-one .dash {
+	margin-left: 0;
+}
+
+.insert-one h2 {
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+.insert-one h6 {
+	margin: 0;
+}
+
+.insert-one p {
+	margin-top: 30px;
+	line-height: 26px;
+}
+
+
+/** 9. PORTFOLIO **/
+
+.portfolio {
+	background: white;
+	padding-top: 100px;
+	width: 100%;
+}
+
+.portfolio h6 {
+	margin: 0;
+}
+
+.portfolio h2 {
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+.portfolio-row {
+	text-align: center;
+	width: 700px;
+	margin: auto;
+	padding-bottom: 60px;
+}
+
+.portfolio-items-container {
+	display: flex;
+	font-size: 0; /* eliminates empty space below images */
+}
+
+.portfolio-item img {
+	width: 100%;
+}
+
+
+/** 10. PROGRESS BAR **/
+
+.progress-bar {
+	background-color: #fcca03;
+	height: 130px;
+}
+
+.progress-bar-row {
+	margin: auto;
+	height: 100%;
+	width: 700px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+
+.progress-bar-item-1 {
+	background-image: url("../img/coffee-cup.svg");
+}
+
+.progress-bar-item-2 {
+	background-image: url("../img/portfolio-outline-counter.svg");
+}
+
+
+.progress-bar-item-3 {
+	background-image: url("../img/nine-oclock-on-circular-clock.svg");
+}
+
+
+.progress-bar-item-4 {
+	background-image: url("../img/checkmark-outline.svg");
+}
+
+.progress-bar-item {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.progress-bar-item h4 {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+.progress-bar-item h2 {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* 11. INSERT TWO */
+.insert-2-container {
+	background: white;
+	padding: 150px 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.insert-2-col-left, .insert-2-col-right {
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+	width: 40%;
+}
+
+
+.insert-2 img {
+	margin: auto;
+	max-width: 80%;
+}
+
+.insert-2 h6 {
+	margin: 0;
+}
+
+.insert-2 h2 {
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+.insert-2-row {
+	width: 700px;
+	margin: auto;
+	padding-bottom: 60px;
+}
+
+.insert-2 .btn, .insert-2 .dash {
+	text-align: center;
+	margin-left: 0;
+}
+
+.insert-2 ul {
+	line-height: 27px;
+	color: #fcca03;
+	font-size: 12px;
+}
+
+.insert-2 span {
+	color: #303233;
+	font-size: 12px;
+}
+
+
+/* 12. INSERT THREE */
+.insert-3-container {
+	background: #f5f5f5;
+	padding: 150px 0px;
+	display: flex;
+	justify-content: center;
+}
+
+.insert-3-col-left, .insert-3-col-right {
+	display: flex;
+	width: 40%;
+}
+
+.insert-3 img {
+	margin: auto;
+	max-width: 80%;
+}
+
+.insert-3 h6 {
+	margin: 0;
+}
+
+.insert-3 h2 {
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+.insert-3-row {
+	width: 700px;
+	margin: auto;
+	padding-bottom: 60px;
+}
+
+.insert-3 .btn, .insert-3 .dash {
+	text-align: center;
+	margin-left: 0;
+}
+
+.insert-3 ul {
+	line-height: 27px;
+	color: #fcca03;
+	font-size: 12px;
+}
+
+.insert-3 span {
+	color: #303233;
+	font-size: 12px;
+}
+
+
+/* 13. BLOG */
+
+.blog {
+	background: white;
+	padding: 150px 0px;
+}
+
+.blog h6 {
+	margin: 0;
+}
+
+.blog h2 {
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+.blog-row {
+	width: 700px;
+	margin: auto;
+	padding-bottom: 60px;
+	text-align: center;
+}
+
+.blog .dash {
+	margin: auto;
+}
+
+.blog-articles-row {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.blog-item {
+	max-width: 25%;
+	min-width: 200px;
+	padding: 0 12px 40px 12px;
+}
+
+.blog-item img {
+	width: 100%;
+}
+
+.blog-item p {
+	margin-top: 7px;
+}
+
+.blog-item h4 {
+	margin-top: 7px;
+	margin-bottom: 0px;
+}
+
+.blog .date {
+	font-size: 12px;
+	font-family: 'Lato', sans-serif;
+}
+
+.blog a {
+	font-family: 'Raleway', sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.yellow-dash {
+	margin-top: 5px;
+	text-align: left;
+	width: 40px;
+	border-bottom: 1px solid #fcca03;
+}
+
+
+/* 14. TESTIMONIAL */
+
+.testimonial-container {
+	padding: 120px 0px;
+	background-image: url("../img/clouds.jpg");
+	background-size: cover;
+
+}
+
+.testimonial-row {
+	text-align: center;
+	width: 42%;
+	margin: auto;
+}
+
+.testimonial h6 {
+	margin: 0;
+}
+
+.testimonial h2 {
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+.testimonial h3 {
+	margin-bottom: 0px;
+}
+
+.testimonial p {
+	margin: 45px 0px;
+	line-height: 30px;
+}
+
+.testimonial .author {
+	margin: auto;
+	font-size: 14px;
+	line-height: 29px;
+}
+
+.testimonial .dash {
+	margin: auto;
+}
+
+
+/* 15. CONTACT */
+
+.contact {
+	background: white;
+}
+
+.contact-container {
+	padding: 0px;
+	padding-top: 120px;
+}
+
+.contact-row {
+	max-width: 600px;
+	text-align: center;
+	margin: auto;
+}
+
+.contact h6 {
+	margin: 0;
+}
+
+.contact h2 {
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+.contact .dash {
+	margin: auto;
+}
+
+.contact-items {
+	margin-top: 80px;
+	padding-bottom: 70px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.contact-item {
+	text-align: center;
+	width: 400px;
+	margin-bottom: 50px;
+}
+
+.contact .flaticon:before {
+	font-size: 40px;
+		margin: 0;
+}
+
+.map {
+	background-image: url('../img/map-2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 27.6%;
+}
+
+
+/* 16. FOOTER */
+.footer h3, .footer p, .footer ul {
+	color: white;
+}
+
+.footer-container {
+	background-color: #303233;
+	padding: 30px;
+	display: flex;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3 {
+	width: 28%;
+	padding: 0 30px;
+}
+
+.footer h3 {
+	margin-bottom: 12px;
+}
+
+.footer .yellow-dash {
+	margin-bottom: 24px;
+}
+
+.footer p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.footer ul {
+	list-style: none;
+	padding: 0;
+	font-size: 14px;
+	line-height: 26px;
+}
+
+/* margin-right values are different
+to compensate for differing icon widths */
+.address-li:before {
+	font-family: "FontAwesome";
+	content: '\f041';
+	margin-right: 20px;
+}
+
+.phone-li:before {
+	font-family: "FontAwesome";
+	content: '\f095';
+	margin-right: 18px;
+}
+
+.email-li:before {
+	font-family: "FontAwesome";
+	content: '\f003';
+	margin-right: 15px;
+}
+
+.news-item {
+	display: flex;
+}
+
+.news-item .date, .news-item p {
+	margin: 0;
+}
+
+.news-item {
+	margin-bottom: 15px;
+}
+
+.news-thumb {
+	margin-right: 10px;
+}
+
+.news-item .date {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 10px;
+}
+
+.news-item p {
+	font-weight: bold;
+}
+
+.gallery-thumbs {
+	display: flex;
+}
+
+.gallery-thumbs img {
+	margin: 0px 10px 10px 0px;
+}
+
+
+/* 17. COPYRIGHT */
+
+.copyright {
+	background-color: #232424;
+	text-align: center;
+}
+
+.copyright p {
+	font-weight: bold;
+	padding: 20px;
+	font-size: 12px;
+	margin: 0;
+	color: #646565;
+}
